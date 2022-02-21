@@ -3,6 +3,9 @@ const express = require("express");
 const hbs = require("hbs");
 const app = express();
 
+// port number
+const port = process.env.PORT || 3000;
+
 const publicDirPath = path.join(__dirname, "../public");
 const viewsDirPath = path.join(__dirname, "../templetes/views");
 const partialsDirPath = path.join(__dirname, "../templetes/partials");
@@ -46,6 +49,6 @@ app.get("*", (req, res) => {
   res.render("404");
 });
 
-app.listen(3000, () => {
-  console.log("listening on port : 3000");
+app.listen(port, () => {
+  console.log(`listening on port : ${port}`);
 });
