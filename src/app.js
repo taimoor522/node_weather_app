@@ -17,10 +17,7 @@ app.set("views", viewsDirPath);
 hbs.registerPartials(partialsDirPath);
 
 app.get("", (req, res) => {
-  return res.render("index", {
-    title: "Home",
-    creator: "Taimoor Ghafar",
-  });
+  return res.send();
 });
 
 app.get("/help", (req, res) => {
